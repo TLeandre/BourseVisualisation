@@ -63,7 +63,7 @@ def getLineChart():
     fg.show()
 
     
-
+## zaflfjaz
 
 def getInvest():
     actions = pd.read_csv('Actions.csv', sep =';')
