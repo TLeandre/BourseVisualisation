@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Lyxor Index Fund - Lyxor STOXX Europe 600 Real Estate UCITS ETF",
+        "symbole": "MEH.PA",
+        "achat": 31.56,
+        "quantity": 10
+    },
+    {
+        "name": "Lyxor Index Fund - Lyxor STOXX Europe Select Dividend 30 UCITS ETF",
+        "symbole": "SEL.PA",
+        "achat": 13.62,
+        "quantity": 24
+    },
+    {
+        "name": "Amundi ETF MSCI EMU High Dividend UCITS ETF",
+        "symbole": "CD8.PA",
+        "achat": 131.11,
+        "quantity": 3
+    }
+]
