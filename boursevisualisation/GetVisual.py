@@ -1,6 +1,5 @@
 import yfinance as yf 
 import pandas as pd 
-import matplotlib.pyplot as plt
 
 def getActionsHist(actions):
     df=[]
@@ -20,6 +19,7 @@ def concatHist(df, actions):
     for i in range(2,len(actions)):
         concatdf = pd.concat([concatdf, df[i]], axis=1)
     concatdf = concatdf.fillna(method='ffill')
+    concatdf = concatdf.fillna(method='bfill')
     
     return concatdf
 
@@ -54,16 +54,6 @@ def getFinalHist():
     
     return finaldf
 
-def getLineChart():
-
-    result = getFinalHist()
-
-    fg = plt.plot(result)
-
-    fg.show()
-
-    
-## zaflfjaz
 
 def getInvest():
     actions = pd.read_csv('Actions.csv', sep =';')

@@ -11,6 +11,8 @@ yfinance = "^0.2.12"
 matplotlib = "^3.7.0"
 streamlit = "^1.18.1"
 plotly = "^5.13.0"
+pandas-datareader = "^0.10.0"
+streamlit-option-menu = "^0.3.2"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
