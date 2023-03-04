@@ -36,7 +36,7 @@ if selected == "Overview":
     co1, co2 =  st.columns(2)
 
     with co1:
-        st.metric(label="Date", value=str(gh.Hist('1d').iloc[-1]['Date'])[0:10])
+        st.metric(label="Date de dernière mise à jour", value=str(gh.Hist('1d').iloc[-1]['Date'])[0:10])
     with co2:
         st.metric(label="Evaluation", value=str(round(gh.Hist('1d').iloc[-1]['Open'], 2)) + "€", delta=str(round(gh.Hist('1d').iloc[-1]['Open']-gh.getInvest(), 2)) + "€")
     
@@ -46,7 +46,7 @@ if selected == "Overview":
     collo1, collo2 =  st.columns(2)
     with collo1:
         frequency = st.selectbox(
-            "Choisir l'interval",
+            "Interval",
             ('1d','5d','1wk','1mo','3mo'))
     with collo2:
         option = st.selectbox(
@@ -77,7 +77,7 @@ if selected == "Overview":
     actions = pd.read_csv('Actions.csv', sep =';')
     actions['invest']=actions['achat']*actions['quantity']
 
-    pie = px.pie(actions, values='invest', names='name', color_discrete_sequence=px.colors.sequential.RdBu, title="Répartition d'investissement du portefeuille")
+    pie = px.pie(actions, values='invest', names='name', color_discrete_sequence=px.colors.sequential.RdBu, title="Répartition d'investissement sur le portefeuille")
     st.plotly_chart(pie, use_container_width=True)
     
 
